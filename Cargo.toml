@@ -1,0 +1,8 @@
+[package]
+name = "arbitary-bitcoin"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitcoin-units = { git = "https://github.com/yancyribbens/rust-bitcoin.git", rev = "51fba0955ed19fabbd4273edc91c8a6684885653" }
+proptest = "=1.2"
