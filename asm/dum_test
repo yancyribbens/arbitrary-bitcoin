@@ -1,0 +1,237 @@
+.section .text.arbitary_bitcoin::prop_test,"ax",@progbits
+	.p2align	4, 0x90
+	.type	arbitary_bitcoin::prop_test,@function
+arbitary_bitcoin::prop_test:
+	.cfi_startproc
+	.cfi_personality 155, DW.ref.rust_eh_personality
+	.cfi_lsda 27, .Lexception72
+	sub rsp, 1336
+	.cfi_def_cfa_offset 1344
+	lea rax, [rip + .L__unnamed_131]
+	mov qword ptr [rsp + 32], rax
+	mov qword ptr [rsp + 40], 3
+	mov byte ptr [rsp + 1255], 0
+	mov rax, qword ptr [rip + <proptest::test_runner::config::Config as core::default::Default>::default@GOTPCREL]
+	lea rdi, [rsp + 240]
+	mov qword ptr [rsp + 24], rdi
+	call rax
+	mov rsi, qword ptr [rsp + 24]
+	lea rdi, [rsp + 144]
+	call <proptest::test_runner::config::Config as core::clone::Clone>::clone
+	jmp .LBB337_3
+.LBB337_1:
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::config::Config>@GOTPCREL]
+	lea rdi, [rsp + 240]
+	call rax
+	jmp .LBB337_30
+	mov rcx, rax
+	mov eax, edx
+	mov qword ptr [rsp + 1256], rcx
+	mov dword ptr [rsp + 1264], eax
+	jmp .LBB337_1
+.LBB337_3:
+	mov rax, qword ptr [rip + proptest::test_runner::config::contextualize_config@GOTPCREL]
+	lea rdi, [rsp + 48]
+	lea rsi, [rsp + 144]
+	call rax
+	jmp .LBB337_4
+.LBB337_4:
+	mov byte ptr [rsp + 1255], 1
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::config::Config>@GOTPCREL]
+	lea rdi, [rsp + 240]
+	call rax
+	jmp .LBB337_7
+.LBB337_5:
+	test byte ptr [rsp + 1255], 1
+	jne .LBB337_31
+	jmp .LBB337_30
+	mov rcx, rax
+	mov eax, edx
+	mov qword ptr [rsp + 1256], rcx
+	mov dword ptr [rsp + 1264], eax
+	jmp .LBB337_5
+.LBB337_7:
+	lea rax, [rip + .L__unnamed_132]
+	mov qword ptr [rsp + 336], rax
+	mov qword ptr [rsp + 344], 27
+	mov rcx, qword ptr [rsp + 336]
+	mov rax, qword ptr [rsp + 344]
+	mov qword ptr [rsp + 80], rcx
+	mov qword ptr [rsp + 88], rax
+	lea rax, [rip + .L__unnamed_133]
+	mov qword ptr [rsp + 352], rax
+	mov qword ptr [rsp + 360], 11
+	mov rcx, qword ptr [rsp + 352]
+	mov rax, qword ptr [rsp + 360]
+	mov qword ptr [rsp + 64], rcx
+	mov qword ptr [rsp + 72], rax
+	mov byte ptr [rsp + 1255], 0
+	movups xmm0, xmmword ptr [rsp + 128]
+	movaps xmmword ptr [rsp + 976], xmm0
+	movups xmm0, xmmword ptr [rsp + 112]
+	movaps xmmword ptr [rsp + 960], xmm0
+	movups xmm0, xmmword ptr [rsp + 48]
+	movups xmm1, xmmword ptr [rsp + 64]
+	movups xmm2, xmmword ptr [rsp + 80]
+	movups xmm3, xmmword ptr [rsp + 96]
+	movaps xmmword ptr [rsp + 944], xmm3
+	movaps xmmword ptr [rsp + 928], xmm2
+	movaps xmmword ptr [rsp + 912], xmm1
+	movaps xmmword ptr [rsp + 896], xmm0
+	mov rax, qword ptr [rip + proptest::test_runner::runner::TestRunner::new@GOTPCREL]
+	lea rdi, [rsp + 368]
+	lea rsi, [rsp + 896]
+	call rax
+	jmp .LBB337_8
+.LBB337_8:
+	lea rax, [rip + .L__unnamed_131]
+	mov qword ptr [rsp + 1000], rax
+	mov qword ptr [rsp + 1008], 3
+	call proptest::arbitrary::traits::any
+	mov qword ptr [rsp + 16], rax
+	jmp .LBB337_11
+.LBB337_9:
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::runner::TestRunner>@GOTPCREL]
+	lea rdi, [rsp + 368]
+	call rax
+	jmp .LBB337_5
+	mov rcx, rax
+	mov eax, edx
+	mov qword ptr [rsp + 1256], rcx
+	mov dword ptr [rsp + 1264], eax
+	jmp .LBB337_9
+.LBB337_11:
+	mov rdi, qword ptr [rsp + 16]
+	lea rax, [rsp + 1000]
+	mov qword ptr [rsp + 1080], rax
+	mov rsi, qword ptr [rsp + 1080]
+	call proptest::strategy::traits::Strategy::prop_map
+	mov qword ptr [rsp], rdx
+	mov qword ptr [rsp + 8], rax
+	jmp .LBB337_12
+.LBB337_12:
+	mov rax, qword ptr [rsp]
+	mov rcx, qword ptr [rsp + 8]
+	mov qword ptr [rsp + 1064], rcx
+	mov qword ptr [rsp + 1072], rax
+	lea rdi, [rsp + 1016]
+	lea rsi, [rsp + 368]
+	lea rdx, [rsp + 1064]
+	call proptest::test_runner::runner::TestRunner::run
+	jmp .LBB337_15
+.LBB337_13:
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::runner::TestRunner>@GOTPCREL]
+	lea rdi, [rsp + 368]
+	call rax
+	jmp .LBB337_18
+	mov rcx, rax
+	mov eax, edx
+	mov qword ptr [rsp + 1256], rcx
+	mov dword ptr [rsp + 1264], eax
+	jmp .LBB337_13
+.LBB337_15:
+	movabs rdx, -9223372036854775806
+	mov eax, 1
+	xor ecx, ecx
+	cmp qword ptr [rsp + 1016], rdx
+	cmove rax, rcx
+	cmp rax, 0
+	jne .LBB337_17
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::runner::TestRunner>@GOTPCREL]
+	lea rdi, [rsp + 368]
+	call rax
+	jmp .LBB337_20
+.LBB337_17:
+	lea rdi, [rsp + 1088]
+	lea rsi, [rsp + 1016]
+	mov edx, 48
+	call memcpy@PLT
+	lea rax, [rsp + 1088]
+	mov qword ptr [rsp + 1320], rax
+	lea rax, [rip + <proptest::test_runner::errors::TestError<T> as core::fmt::Display>::fmt]
+	mov qword ptr [rsp + 1328], rax
+	lea rax, [rsp + 1088]
+	mov qword ptr [rsp + 1304], rax
+	lea rax, [rip + <proptest::test_runner::errors::TestError<T> as core::fmt::Display>::fmt]
+	mov qword ptr [rsp + 1312], rax
+	mov rax, qword ptr [rsp + 1304]
+	mov qword ptr [rsp + 1216], rax
+	mov rax, qword ptr [rsp + 1312]
+	mov qword ptr [rsp + 1224], rax
+	jmp .LBB337_24
+.LBB337_18:
+	lea rdi, [rsp + 1064]
+	call core::ptr::drop_in_place<proptest::strategy::map::Map<proptest::strategy::map::Map<proptest::num::u64::Any,fn(u64) .> bitcoin_units::amount::Amount>,arbitary_bitcoin::prop_test::{{closure}}>>
+	jmp .LBB337_5
+	mov rcx, rax
+	mov eax, edx
+	mov qword ptr [rsp + 1256], rcx
+	mov dword ptr [rsp + 1264], eax
+	jmp .LBB337_18
+.LBB337_20:
+	lea rdi, [rsp + 1064]
+	call core::ptr::drop_in_place<proptest::strategy::map::Map<proptest::strategy::map::Map<proptest::num::u64::Any,fn(u64) .> bitcoin_units::amount::Amount>,arbitary_bitcoin::prop_test::{{closure}}>>
+	jmp .LBB337_21
+.LBB337_21:
+	mov byte ptr [rsp + 1255], 0
+	add rsp, 1336
+	.cfi_def_cfa_offset 8
+	ret
+.LBB337_22:
+	.cfi_def_cfa_offset 1344
+	lea rdi, [rsp + 1088]
+	call core::ptr::drop_in_place<proptest::test_runner::errors::TestError<proptest::sugar::NamedArguments<&str,bitcoin_units::amount::Amount>>>
+	jmp .LBB337_29
+	mov rcx, rax
+	mov eax, edx
+	mov qword ptr [rsp + 1256], rcx
+	mov dword ptr [rsp + 1264], eax
+	jmp .LBB337_22
+.LBB337_24:
+	lea rax, [rsp + 368]
+	mov qword ptr [rsp + 1288], rax
+	mov rax, qword ptr [rip + <proptest::test_runner::runner::TestRunner as core::fmt::Display>::fmt@GOTPCREL]
+	mov qword ptr [rsp + 1296], rax
+	lea rax, [rsp + 368]
+	mov qword ptr [rsp + 1272], rax
+	mov rax, qword ptr [rip + <proptest::test_runner::runner::TestRunner as core::fmt::Display>::fmt@GOTPCREL]
+	mov qword ptr [rsp + 1280], rax
+	mov rax, qword ptr [rsp + 1272]
+	mov qword ptr [rsp + 1232], rax
+	mov rax, qword ptr [rsp + 1280]
+	mov qword ptr [rsp + 1240], rax
+	movups xmm0, xmmword ptr [rsp + 1216]
+	movaps xmmword ptr [rsp + 1184], xmm0
+	movups xmm0, xmmword ptr [rsp + 1232]
+	movups xmmword ptr [rsp + 1200], xmm0
+	lea rsi, [rip + .L__unnamed_60]
+	lea rdi, [rsp + 1136]
+	lea rcx, [rsp + 1184]
+	mov r8d, 2
+	mov rdx, r8
+	call core::fmt::Arguments::new_v1
+	jmp .LBB337_26
+.LBB337_26:
+	lea rsi, [rip + .L__unnamed_134]
+	mov rax, qword ptr [rip + core::panicking::panic_fmt@GOTPCREL]
+	lea rdi, [rsp + 1136]
+	call rax
+	jmp .LBB337_27
+.LBB337_27:
+	ud2
+	mov rax, qword ptr [rip + core::panicking::panic_in_cleanup@GOTPCREL]
+	call rax
+.LBB337_29:
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::runner::TestRunner>@GOTPCREL]
+	lea rdi, [rsp + 368]
+	call rax
+	jmp .LBB337_18
+.LBB337_30:
+	mov rdi, qword ptr [rsp + 1256]
+	call _Unwind_Resume@PLT
+.LBB337_31:
+	mov rax, qword ptr [rip + core::ptr::drop_in_place<proptest::test_runner::config::Config>@GOTPCREL]
+	lea rdi, [rsp + 48]
+	call rax
+	jmp .LBB337_30
+
